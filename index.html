@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width =device-width, initia-scale=1">
+    <style> 
+    *{margin: 0;
+        padding: 0;}
+        .banner{
+            background:  linear-gradient(rgba(0,0,0,0.5),rgb(120, 240, 220)),url(/assets/images/s.jfif);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .banner-text{
+            text-align: center;
+            color: white;
+            padding-top: 180px;
+        }
+        .banner-text h1{
+            font-size: 130px;
+            font-family: 'Moon Dance', cursive;
+        }
+        .banner-text p{
+            font-size: 20px;
+            font-style: italic;
+        }
+        .banner-btn{
+            margin: 70px auto 0;
+
+        }
+        .banner-btn a{
+            width: 150px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 10px;
+            padding: 12px 0;
+            color: white;
+            border: solid white 5px;
+            position: relative;
+            z-index: 1;
+        transition: color 0.5s;
+        }
+        .banner-btn a span{
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: white;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        .banner-btn a:hover span{
+            width: 100%;
+        }
+        .banner-btn a:hover {
+            color: black;
+        }
+       .sidenav{
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            right: -250px;
+            top: 0;
+            background: #009688;
+            z-index: 2;
+transition: 0.5s;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 50px 20px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .manubtn{
+            width: 50px;
+            height: 50px;
+            background: #009688;
+            text-align: center;
+            position: fixed;
+            right: 30px;
+            top: 20px;
+            border-radius: 3px;   
+            z-index: 3;
+            cursor: pointer;
+        }
+        .manubtn img{
+            width: 20px;
+            margin-top: 15px;
+        }
+@media screen and (max-width: 770px) {
+    .banner-text h1{
+        font-size: 44px;
+    }
+    .banner-btn a{
+        display: block;
+        margin: 20px auto;
+    }
+}
+/* feature */
+.feature{
+    width: 100%;
+    padding: 70px 0%;
+}
+.title-text p{
+    margin: auto;
+    font-size: 20px;
+    color:  #009688;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+.title-text p::after{
+    content: '';
+    height: 35px;
+    width: 50px;
+    background: linear-gradient(#019587,#fff);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform:rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+
+}
+.title-text h1{ 
+    font-size: 50px;
+}
+.feature-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.features{
+flex-basis: 50%;
+
+}
+.features-img{
+    flex-basis: 50%;
+    margin: auto;
+
+}
+.features-img img{
+    width: 70%;
+    border-radius: 10px;
+
+}
+.features h1{
+    text-align: left;
+    margin-bottom: 10px;
+font-weight: 100;
+color: #009688;
+}
+.features-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.featue-text p{
+    padding: 0 20px;
+    text-align: center;
+}
+@media screen and (max-width: 770px){
+    .title-text h1{
+        font-size: 35px;
+    }
+    .features{
+        flex-basis: 100%;
+    }
+    .features-img{
+        flex-basis: 100%;
+    
+    }
+    features-img img{
+        width: 100%;
+    }
+}   
+
+
+/* services */
+
+
+#service{
+    width: 100%;
+padding: 70px 0;
+background: #d1d0d0;
+}
+.service-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.single-service{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: black;
+}
+.single-service img{
+    width: 100%;
+    border-radius: 7px;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),#009688);
+    opacity: 0;
+    transition: 1s;
+}
+.single-service:hover .overlay{
+opacity: 1s;
+
+}
+.single-service img:hover .overlay{
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(rgba(0,0,0,0.5),#009688);
+            z-index: -1;
+            transition: 0.5s;
+        }
+        .single-service img:hover .overlay{
+            width: 100%;
+        }
+        .single-service img:hover {
+            color: black;
+        }
+.service-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+        </style>
+</head>
+<body>
+    
+        <section class="banner">
+        <div class="banner-text">
+            <h1>Hair studio</h1>
+            <p>Style Your Hair Is Style Your Life</p>
+            <div class="banner-btn">
+                <a href="#"><span></span>
+                    Find Out</a>
+                <a href="#"><span></span> More</a>
+            </div>
+        </div>
+    </section>
+    <div class="sidenav">
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">FEATURES</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">TESTIMONIALS</a></li>
+                <li><a href="#">MEET US</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="manubtn">
+        <img src="/assets/images/s.jfif" alt="">
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- FEATURES -->
+    <section id="feature">
+        <div class="title-text">
+            <p>FEATURES</p>
+            <h1>Why Choose Us</h1>
+        </div>
+        <div class="feature-box">
+            <div class="features">
+                <h1>experienced staff</h1>
+                <div class="features-desc">
+                    <div class="feature-icon">
+                        <i class="fa fa fa-shield"></i>
+                        </div>
+                        <div class="feature-text">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, fuga corporis? Iure odit vero magnam aliquam quos delectus molestias in culpa, sed molestiae aliquid totam rerum corrupti earum amet dignissimos repellendus deserunt. Accusamus, id voluptate!</p>
+                        </div>
+                    </div>
+                    <h1>pre booking online</h1>
+                <div class="features-desc">
+                    <div class="feature-icon">
+                         <i class="fa fa-check-square-o"></i>
+                        </div>
+                        <div class="feature-text"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, fuga corporis? Iure odit vero magnam aliquam quos delectus molestias in culpa, sed molestiae aliquid totam rerum corrupti earum amet dignissimos repellendus deserunt. Accusamus, id voluptate!</p>
+                        </div> 
+                    </div>
+                <h1>affordable cost</h1>
+                <div class="features-desc">
+                    <div class="feature-icon">
+                    <i class="fa fa-inr"></i>
+                    </div>
+                        <div class="feature-text"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, fuga corporis? Iure odit vero magnam aliquam quos delectus molestias in culpa, sed molestiae aliquid totam rerum corrupti earum amet dignissimos repellendus deserunt. Accusamus, id voluptate!</p>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="features-img">
+                <img src="/assets/images/cutting.jfif" alt="">
+            </div>
+        </div>
+    </section>
+<br>
+<br> 
+<br>
+    <!-- service  -->
+<section id="service">
+    <div class="title-text">
+        <p>SERVICES</p>
+        <h1>We Provide Better</h1>
+    </div>
+    <div class="service-box">
+        <div class="single-service">
+            <img src="/assets/images/v.jfif" height="100%">
+            <div class="overlay"></div>
+            <div class="service-desc">
+            <h3>Hair Styling</h3>
+            <hr>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consequatur delectus totam soluta nostrum dignissimos.</p>
+            </div>
+        </div>
+        <div class="single-service">
+            <img src="/assets/images/jim.jfif">
+            <div class="overlay"></div>
+            <div class="service-desc">
+            <h3>Hair Cut</h3>
+            <hr>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consequatur delectus totam soluta nostrum dignissimos.</p>
+        </div>
+        </div>
+        <div class="single-service">
+            <img src="/assets/images/rm.jfif" >
+            <div class="overlay"></div>
+            <div class="service-desc">
+            <h3>Dry Shampoo</h3>
+            <hr>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consequatur delectus totam soluta nostrum dignissimos.</p>
+            </div>
+        </div>
+        <div class="single-service">
+            <img src="/assets/images/handsome mann.jfif" height="100%">
+            <div class="overlay"></div>
+            <div class="service-desc">
+            <h3>Beard Trim</h3>
+            <hr>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consequatur delectus totam soluta nostrum dignissimos.</p>
+        </div>
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var menubtn = document.getElementById("menubtn")
+    var sidenav = document.getElementById("sidenav")
+    var menu = document.getElementById("menu")
+    sidenav.style,right = "-250px";
+
+    menubtn.onclick = function(){
+        if(sidenav.style.right == "-250px"){
+            sidenav.style.right = "0";
+            menu.src = "images/close.png";
+    }
+    else{
+sidenav.style.right = "-250px";
+menu.src = "images/menu.png";
+    }
+}
+</script>
+    
+
+</body>
+</html>
